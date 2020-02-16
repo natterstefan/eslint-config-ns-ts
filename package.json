@@ -1,0 +1,117 @@
+{
+  "name": "eslint-config-ns-ts",
+  "version": "1.1.0",
+  "description": "eslint typescript config ready to be used in multiple projects",
+  "author": "Stefan Natter",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "prettier",
+    "prettier-config",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/natterstefan/eslint-config-ns-ts/issues"
+  },
+  "homepage": "https://github.com/natterstefan/eslint-config-ns-ts#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natterstefan/eslint-config-ns-ts"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "prettier.config.js"
+  ],
+  "scripts": {
+    "lint": "(cd example && npm run lint)",
+    "release": "HUSKY_SKIP_HOOKS=1 standard-version",
+    "release-major": "HUSKY_SKIP_HOOKS=1 standard-version --release-as major",
+    "release-minor": "HUSKY_SKIP_HOOKS=1 standard-version --release-as minor",
+    "release-patch": "HUSKY_SKIP_HOOKS=1 standard-version --release-as patch",
+    "start": "(cd example && npm start)",
+    "test": "(cd example && npm run lint && npm t)"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint-config-ns": "^1.1.0",
+    "typescript": "^3.7.5"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.7.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "prettier": "^1.19.1"
+  },
+  "devDependencies": {
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.7.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "4.2.3",
+    "prettier": "1.19.1",
+    "standard-version": "7.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "standard-version": {
+    "changelogHeader": "# eslint-config-ns-ts Changelog\n\nAll notable changes to this project will be documented here. The format is based\non [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project\nadheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).\n\n",
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Fixes"
+      },
+      {
+        "type": "chore",
+        "hidden": true
+      },
+      {
+        "type": "docs",
+        "hidden": true
+      },
+      {
+        "type": "style",
+        "hidden": true
+      },
+      {
+        "type": "refactor",
+        "hidden": true
+      },
+      {
+        "type": "perf",
+        "hidden": true
+      },
+      {
+        "type": "test",
+        "hidden": true
+      }
+    ]
+  }
+}
