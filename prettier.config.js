@@ -1,3 +1,1 @@
-const prettier = require('eslint-config-ns/prettier')
-
-module.exports = prettier
+module.exports = require('eslint-config-ns/prettier')

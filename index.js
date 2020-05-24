@@ -7,17 +7,19 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   rules: {
+    // general ESLint rules
     'class-methods-use-this': 0,
-    'import/extensions': 0,
-    'sort-keys': 0,
 
-    // jest settings
+    // rules for https://github.com/benmosher/eslint-plugin-import
+    'import/extensions': 0,
+
+    // rules for https://www.npmjs.com/package/eslint-plugin-jest
     'jest/prefer-strict-equal': 'error',
 
-    // react settings
+    // rules for https://www.npmjs.com/package/eslint-plugin-react
     'react/prop-types': 0, // focus on interfaces and types instead
 
-    // ts settings
+    // rules for https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
     // allow to use _ as prefix for unused arguments to functions, in order to implement interfaces
     '@typescript-eslint/no-unused-vars': [
       'error',
