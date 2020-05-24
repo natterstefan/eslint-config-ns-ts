@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, FunctionComponent } from 'react'
 
 import { Text } from './text'
 
-export const App = () => {
+export const App: FunctionComponent = () => {
   const [counter, setCounter] = useState(0)
   const headline = 'Hello eslint-config-ns-ts'
 
@@ -11,7 +11,7 @@ export const App = () => {
   return (
     <>
       <h1>{headline}</h1>
-      <Text />
+      <Text text="Hello World" />
       <p>State Counter: {counter}</p>
     </>
   )

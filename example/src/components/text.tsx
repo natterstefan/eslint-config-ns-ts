@@ -1,5 +1,12 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 
-const Text = () => <div>Hello World</div>
+interface IProps {
+  /**
+   * Text to render in the UI
+   */
+  text: string
+}
+
+const Text: FunctionComponent<IProps> = ({ text }) => <div>{text}</div>
 
 export { Text }
