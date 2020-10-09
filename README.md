@@ -86,7 +86,7 @@ This ESLint configuration comes with the same fundamental assumptions, as
 
 This package DOES NOT use [SemVer](https://semver.org/) for versioning. Though
 you can think about SemVer when reading the version, except the major and minor
-version follows the one of eslint-config-ns. For the versions available, see
+version follows the one of `eslint-config-ns`. For the versions available, see
 the tags on [this repository](https://github.com/natterstefan/eslint-config-ns/releases).
 
 ## LICENCE
