@@ -5,7 +5,7 @@
   "description": "Example code for eslint-config-ns-ts",
   "scripts": {
     "coverage": "jest --coverage",
-    "lint": "eslint --cache 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint": "eslint --cache 'src/**/*.{js,jsx,ts,tsx}' && prettier \"./src/**/*.{js,jsx,ts,tsx}\" --check",
     "lint-staged-js": "git diff --diff-filter=d --cached --name-only -z -- '*.ts' '*.tsx' '*.js' '*.jsx' | xargs -0 -I % sh -c 'git show \":%\" | eslint --cache --stdin --stdin-filename \"%\";'",
     "start": "webpack-dev-server --progress --colors",
     "test": "jest ./src",
