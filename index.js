@@ -44,7 +44,16 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.(test|spec).tsx?', '*.(test|spec).jsx?'],
+      files: [
+        '*.test.ts',
+        '*.test.tsx',
+        '*.test.js',
+        '*.test.jsx',
+        '*.spec.ts',
+        '*.spec.tsx',
+        '*.spec.js',
+        '*.spec.jsx',
+      ],
       rules: {
         'import/no-extraneous-dependencies': 0,
         'max-classes-per-file': 0,
@@ -52,6 +61,14 @@ module.exports = {
         // lets loosen the typescript rules in test files a little
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/no-explicit-any': 0,
+      },
+    },
+    {
+      files: ['webpack.*.js'],
+      rules: {
+        'import/no-extraneous-dependencies': 0,
+        'no-console': 0,
+        '@typescript-eslint/no-var-requires': 0,
       },
     },
   ],
