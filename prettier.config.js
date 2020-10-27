@@ -1,1 +1,1 @@
-module.exports = require('eslint-config-ns/prettier')
+module.exports = require('eslint-config-ns/prettier.config')

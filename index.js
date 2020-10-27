@@ -7,19 +7,17 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   rules: {
-    // general ESLint rules
-    'class-methods-use-this': 0,
-
-    // rules for https://github.com/benmosher/eslint-plugin-import
-    'import/extensions': 0,
-
-    // rules for https://www.npmjs.com/package/eslint-plugin-jest
-    'jest/prefer-strict-equal': 'error',
-
     // rules for https://www.npmjs.com/package/eslint-plugin-react
     'react/prop-types': 0, // focus on interfaces and types instead
 
-    // rules for https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
+    /**
+     * Typescript Rules
+     * @see https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
+     */
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
+    // note you must disable the base rule as it can report incorrect errors
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
     // allow to use _ as prefix for unused arguments to functions, in order to implement interfaces
     '@typescript-eslint/no-unused-vars': [
       'error',
@@ -27,12 +25,22 @@ module.exports = {
     ],
     '@typescript-eslint/no-explicit-any': 0, // will be checked by tsconfig.js
     '@typescript-eslint/explicit-function-return-type': 0, // will be checked by tsconfig.js
-    '@typescript-eslint/interface-name-prefix': [
-      2,
+    // prefix interfaces with `I`, e.g. `IComponentProps`
+    // @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md#enforce-that-interface-names-do-not-begin-with-an-i
+    '@typescript-eslint/naming-convention': [
+      'error',
       {
-        prefixWithI: 'always',
+        selector: 'interface',
+        format: ['PascalCase'],
+        leadingUnderscore: 'allow',
+        custom: {
+          regex: '^I[A-Z]',
+          match: true,
+        },
       },
     ],
+    // disable old rule
+    '@typescript-eslint/interface-name-prefix': 0,
   },
   overrides: [
     {
