@@ -4,6 +4,12 @@
 [![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns-ts.svg)](https://github.com/natterstefan/eslint-config-ns-ts/blob/master/LICENCE)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+## ATTENTION
+
+This repository was merged with <https://github.com/natterstefan/eslint-config-ns> and will be developed there in the future.
+
+----
+
 Lint your typescript projects with ease, based on the popular [javascript
 code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb) and
 enhanced with typescript specific rules. This config extends my other config
